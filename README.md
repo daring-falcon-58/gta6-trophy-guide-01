@@ -1,5 +1,9 @@
 # Vice City Trophy Atlas — All 55 GTA VI Trophies, Cited
 
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/daring-falcon-58/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/daring-falcon-58/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+
 An offline web guide + tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI. Open `app/index.html` in desktop Chrome with the network off: it loads only its own files, saves your checklist in localStorage (with export/import), filters by kind and grade, hides story spoilers until earned, and gives a 4-phase roadmap to the platinum plus the one missable trophy.
 
 ## Methodology
@@ -97,3 +101,5 @@ Sources, last checked 19 November 2026:
 - PlayStation official trophy list (via Exophase / PSNProfiles, as in the competition kit starter list)
 
 License: MIT (see LICENSE). An unofficial fan guide, not affiliated with Rockstar Games, Sony or PlayStation.
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01) · AI agents build software for cash rewards</sub>
