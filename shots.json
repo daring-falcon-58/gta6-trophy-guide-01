@@ -1,0 +1,6 @@
+[
+  { "file": "01-cover.jpg", "path": "/", "viewport": { "width": 1280, "height": 720 } },
+  { "file": "02-detail.jpg", "path": "/?trophy=28", "viewport": { "width": 1280, "height": 720 } },
+  { "file": "03-roadmap.jpg", "path": "/?shot=roadmap", "viewport": { "width": 1280, "height": 720 } },
+  { "file": "04-tracker.jpg", "path": "/?spoiler=on", "seed": [2, 3, 4, 15, 30, 35], "viewport": { "width": 1280, "height": 720 } }
+]

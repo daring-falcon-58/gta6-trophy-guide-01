@@ -1,0 +1,173 @@
+/* Vice City Trophy Atlas — our own neon look. No Rockstar art, no images at all:
+   gradients, borders and inline SVG-free CSS shapes only. Dark violet night,
+   hot-pink and cyan neon, readable at a 1280x720 screenshot. */
+:root {
+  --bg: #0d0716;
+  --bg2: #17102b;
+  --panel: #1e1436;
+  --panel2: #261a44;
+  --line: #3d2b66;
+  --text: #f2ecff;
+  --muted: #b9aede;
+  --pink: #ff2e88;
+  --cyan: #2ee6ff;
+  --gold: #ffd75e;
+  --silver: #cfd6e4;
+  --bronze: #e0955a;
+  --platinum: #bfe9ff;
+  --green: #3ddc97;
+  --red: #ff5d5d;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 320px at 85% -80px, rgba(255, 46, 136, 0.28), transparent 60%),
+    radial-gradient(800px 300px at 5% -60px, rgba(46, 230, 255, 0.20), transparent 60%),
+    linear-gradient(180deg, #150b28 0%, var(--bg) 420px);
+  font-size: 15px;
+  line-height: 1.45;
+}
+a { color: var(--cyan); }
+
+/* ---------- header / progress ---------- */
+.hero { padding: 26px 28px 18px; border-bottom: 1px solid var(--line); }
+.hero-inner { max-width: 1220px; margin: 0 auto; }
+.kicker { margin: 0 0 4px; color: var(--cyan); letter-spacing: 0.18em; font-size: 11px; font-weight: 700; }
+h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #ff7ab8, var(--pink) 35%, var(--gold) 70%, var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sub { margin: 8px 0 14px; max-width: 980px; color: var(--muted); font-size: 15px; }
+.progress-wrap { max-width: 980px; }
+.progress-line { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; }
+.progress-line #gradeText { color: var(--muted); font-weight: 400; font-size: 13px; }
+.progress-bar { height: 12px; margin-top: 6px; border-radius: 6px; background: #241a3d; border: 1px solid var(--line); overflow: hidden; }
+#progressFill { height: 100%; width: 0%; border-radius: 6px;
+  background: linear-gradient(90deg, var(--pink), var(--gold), var(--cyan)); transition: width 0.25s ease; }
+
+/* ---------- controls ---------- */
+.controls {
+  max-width: 1220px; margin: 0 auto; padding: 12px 28px;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+}
+#search {
+  flex: 1 1 220px; min-width: 200px; padding: 8px 10px;
+  background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px; font-size: 14px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  padding: 7px 12px; border-radius: 20px; cursor: pointer;
+  background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.chip:hover { border-color: var(--pink); }
+.chip.on { background: var(--pink); border-color: var(--pink); color: #fff; }
+.ctl { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; }
+.ctl select, .ctl input[type="checkbox"] { accent-color: var(--pink); }
+.ctl select {
+  padding: 7px 8px; background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px; font-size: 13px;
+}
+.controls button, .importBtn {
+  padding: 8px 12px; border-radius: 8px; cursor: pointer;
+  background: var(--panel2); color: var(--text);
+  border: 1px solid var(--line); font-size: 13px; font-weight: 600;
+}
+.controls button:hover, .importBtn:hover { border-color: var(--cyan); }
+.importBtn input { display: none; }
+
+/* ---------- sections ---------- */
+main { max-width: 1220px; margin: 0 auto; padding: 0 28px 30px; }
+section { margin-top: 22px; }
+h2 { font-size: 22px; margin: 0 0 8px; color: var(--text); }
+.section-note { color: var(--muted); margin: 0 0 12px; font-size: 14px; }
+.phases { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.phases li {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 14px; font-size: 14px; color: var(--muted);
+}
+.phases li strong { color: var(--text); }
+.missable-card {
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.16), rgba(255, 93, 93, 0.07));
+  border: 1px solid var(--pink); border-radius: 12px; padding: 14px 16px; font-size: 14px;
+}
+.missable-card p { margin: 0 0 8px; }
+.missable-card p:last-child { margin: 0; }
+.cite { color: var(--muted); font-size: 13px; }
+
+/* ---------- platinum hero ---------- */
+.platinum-hero {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: linear-gradient(135deg, #2a1b4d, #12283d);
+  border: 1px solid var(--platinum); border-radius: 14px; padding: 16px 18px;
+}
+.platinum-hero .medal {
+  flex: 0 0 auto; width: 58px; height: 58px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, var(--platinum) 55%, #5f8fb0);
+  color: #0d2b3d; font-size: 26px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.platinum-hero h3 { margin: 0 0 4px; font-size: 20px; }
+.platinum-hero p { margin: 0 0 6px; color: var(--muted); font-size: 14px; }
+.platinum-hero p:last-child { margin: 0; }
+
+/* ---------- trophy cards ---------- */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 14px; cursor: pointer; text-align: left; color: var(--text);
+  font: inherit; display: block; width: 100%;
+}
+.card:hover { border-color: var(--pink); }
+.card.earned { border-color: var(--green); background: #16283a; }
+.card.open { border-color: var(--cyan); }
+.card-top { display: flex; align-items: flex-start; gap: 10px; }
+.card-top input[type="checkbox"] { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--green); flex: 0 0 auto; cursor: pointer; }
+.card-body { flex: 1; min-width: 0; }
+.card-name { font-size: 16px; font-weight: 700; line-height: 1.25; }
+.card-desc { color: var(--muted); font-size: 13.5px; margin-top: 3px; }
+.card-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.badge {
+  font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 12px; border: 1px solid var(--line); color: var(--text);
+}
+.badge.platinum { background: #274b63; color: var(--platinum); border-color: var(--platinum); }
+.badge.gold { background: #4d3d10; color: var(--gold); border-color: var(--gold); }
+.badge.silver { background: #39404d; color: var(--silver); border-color: var(--silver); }
+.badge.bronze { background: #4d2c17; color: var(--bronze); border-color: var(--bronze); }
+.badge.kind { background: transparent; color: var(--cyan); border-color: var(--cyan); }
+.badge.missable { background: #571224; color: #ffb3c8; border-color: var(--pink); }
+.badge.count { background: transparent; color: var(--gold); border-color: var(--gold); }
+.badge.hidden-tag { background: transparent; color: var(--muted); }
+.card-detail { margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 10px; font-size: 14px; }
+.card-detail p { margin: 0 0 8px; }
+.card-detail p:last-child { margin: 0; }
+.card-detail .label { color: var(--cyan); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.url-text { color: var(--cyan); word-break: break-all; font-size: 12.5px; }
+.spoiler-note { color: var(--muted); font-style: italic; }
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 18px; color: var(--muted); }
+
+/* ---------- sources ---------- */
+#sources { font-size: 14px; color: var(--muted); }
+#sources p { margin: 0 0 10px; }
+#sources strong { color: var(--text); }
+.source-list { margin: 0 0 12px; padding-left: 20px; }
+.source-list li { margin-bottom: 6px; }
+
+footer { max-width: 1220px; margin: 0 auto; padding: 0 28px 26px; color: var(--muted); font-size: 12.5px; }
+
+@media (max-width: 860px) {
+  .cards, .phases { grid-template-columns: 1fr; }
+  h1 { font-size: 32px; }
+}
