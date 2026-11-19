@@ -72,12 +72,12 @@ function makeText(tag, text, className) {
 }
 
 function renderSources(trophy) {
-  const box = document.createElement('div');
-  box.append(makeText('p', '', ''));
-  const label = makeText('span', 'Sources: ', 'label');
-  box.firstChild.append(label);
+  const para = makeText('p', '', '');
+  para.append(makeText('span', 'Sources: ', 'label'));
   const lines = (trophy.sources || []).map((s) => (s.url ? `${s.name} — ${s.url}` : s.name));
-  box.firstChild.append(document.createTextNode(lines.join('  |  ')));
+  para.append(document.createTextNode(lines.join('  |  ')));
+  const box = document.createElement('div');
+  box.append(para);
   return box;
 }
 
